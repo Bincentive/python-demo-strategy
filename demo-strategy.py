@@ -72,7 +72,7 @@ def strategy_close_average_v2(instance,client,strategy_id, exchange_id, base_cur
     
     while(close_list.shape[0] < days):
         close_list = np.append(close_list, instance.fetch_ticker(currency)['close'])
-        time.sleep(time_stamp)
+        time.sleep(interval)
     
     while(True):
         close = instance.fetch_ticker(currency)['close']
@@ -88,5 +88,5 @@ def strategy_close_average_v2(instance,client,strategy_id, exchange_id, base_cur
             print('Error!')
             break
             
-        time.sleep(time_stamp)
+        time.sleep(interval)
 
