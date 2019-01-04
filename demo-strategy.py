@@ -90,13 +90,3 @@ def strategy_close_average_v2(instance,client,strategy_id, exchange_id, base_cur
             
         time.sleep(time_stamp)
 
-
-        
-### Some examples
-email = 'xxx'
-password = 'xxx'
-testing = True  # Change this to False if you're using mainnet. 
-
-client = TraderClient(email, password, testing)
-bitmex = ccxt.bitmex()
-strategy_close_average_v1(bitmex,client,129,3,'XBTUSD','BTC',1,leverage=1)
