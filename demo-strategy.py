@@ -7,7 +7,7 @@ from bincentive_trader.client import TraderClient
 
 
 def get_real_close_data(instance,currency):
-    """ Use ccxt to get the close and average price.
+    """ Uses ccxt to get the close and average price.
         :param instance: ccxt instrument object, e.g. ccxt.bitmex()
         :param currency: string, e.g. "BTC/USD"
         :return: float,close and average price 
@@ -20,7 +20,7 @@ def get_real_close_data(instance,currency):
 # average = (close+open)/2
 def strategy_close_average_v1(instance,client,strategy_id, exchange_id, base_currency, quote_currency, amount,leverage=None, timeout=None, interval = 0):
     
-    """Trade on a situation that whether the close price > (the last close price+ the last open price)/2.
+    """Trades on a situation where the close price > (the last close price+ the last open price)/2.
         :param instance: ccxt instrument object, e.g. ccxt.bitmex()
         :param client: TraderClient object
         :param strategy_id: int
@@ -52,7 +52,7 @@ def strategy_close_average_v1(instance,client,strategy_id, exchange_id, base_cur
 
 # Real average
 def strategy_close_average_v2(instance,client,strategy_id, exchange_id, base_currency, quote_currency, amount,leverage=None, timeout=None, interval = 0, days = 3):
-    """Trade on a situation that whether the close price > the average of the close price.
+    """Trades on a situation where the close price > the average of the close price.
         :param instance: ccxt instrument object, e.g. ccxt.bitmex()
         :param client: TraderClient object
         :param strategy_id: int
