@@ -5,9 +5,8 @@ import ccxt
 
 email = 'me@example.com'
 password = 'super secret'
-testing = True  # Change this to False if you're using mainnet. 
 
-client = TraderClient(email, password, testing)
+client = TraderClient(email, password, False)
 
 bitmex = ccxt.bitmex()
 
