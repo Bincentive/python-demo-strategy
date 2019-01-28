@@ -9,8 +9,10 @@ password = 'super secret'
 client = TraderClient(email, password, False)
 
 bitmex = ccxt.bitmex()
+strategyId = 129
+bitmexId = 3
 
-strategy_close_average_v1(bitmex,client,129,3,'XBTUSD','BTC',1,leverage=1)
+strategy_close_average_v1(bitmex,client,strategyId,bitmexId,'XBTUSD','BTC',1,leverage=1)
 
 ```
 
